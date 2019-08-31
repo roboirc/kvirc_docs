@@ -1,0 +1,2 @@
+prefix	meson_post_install.py	/^prefix = os.environ.get('MESON_INSTALL_PREFIX', '\/usr\/local')$/;"	v
+datadir	meson_post_install.py	/^datadir = os.path.join(prefix, 'share')$/;"	v

@@ -1,0 +1,10 @@
+Build started at 2019-04-17T21:13:43.581862
+Main binary: /usr/bin/python3
+Python system: Linux
+The Meson build system
+Version: 0.45.1
+Source dir: /home/gmagoon/Downloads/hexchat/src
+Build dir: /home/gmagoon/Downloads/hexchat/src/build
+Build type: native build
+
+ERROR: First statement must be a call to project
