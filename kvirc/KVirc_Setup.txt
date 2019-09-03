@@ -1,0 +1,6 @@
+sudo apt install qt5-default qtmultimedia5-dev
+https://github.com/kvirc/KVIrc/wiki/installation
+
+Important Notes: This will install the executable in /usr/local/bin (if you don't have specified a different -DCMAKE_INSTALL_PREFIX option in the CMake rules), the libraries in /usr/local/lib (if you don't have specified a different -DLIB_SUFFIX option in the CMake rules) and the shared data in /usr/local/share/kvirc.
+
+Make sure that /usr/local/lib is in your /etc/ld.so.conf, otherwise KVIrc will fail to start because it will be unable to find kvilib:

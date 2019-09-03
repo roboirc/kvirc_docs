@@ -1,0 +1,47 @@
+CMakeCache.txt
+CMakeFiles
+CMakeTmp
+cmake_install.cmake
+cmake_uninstall.cmake
+Makefile
+kvi_sysconfig.h
+kvi_sysbuildinfo.h
+lib
+b
+build
+CMakeLists.txt.user
+qtcreator-build
+CMakeLists.txt.user*
+preinstalled.kvc
+/data/resources_win32/version.h
+.DS_Store
+.directory
+*.ssexwsp
+*.ssexwsp.user
+*.sublime-*
+\#*\#
+.\#*
+.*.swp
+
+# VS Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio cache/options directory
+.vs/
+.vscode/
+
+# Visual Studio solutions
+CMakeSettings.json
+KVIrc.sln
+KVIrc.vcxproj
+KVIrc.vcxproj.filters
+KVIrc.vcxproj.user

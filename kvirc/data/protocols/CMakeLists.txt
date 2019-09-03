@@ -1,0 +1,4 @@
+if(KDE4_FOUND)
+	install(FILES _irc.protocol DESTINATION ${SERVICES_INSTALL_DIR})
+	install(FILES _irc6.protocol DESTINATION ${SERVICES_INSTALL_DIR})
+endif(KDE4_FOUND)

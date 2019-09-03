@@ -1,0 +1,11 @@
+--- a/enchant-2/enchant.h
++++ b/enchant-2/enchant.h
+@@ -32,6 +32,8 @@
+ 
+ #include <stdint.h> /* for uint32_t */
+ #include <sys/types.h> /* for size_t, ssize_t */
++#include <BaseTsd.h>
++typedef SSIZE_T ssize_t;
+ 
+ 
+ #ifdef __cplusplus

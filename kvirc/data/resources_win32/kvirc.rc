@@ -1,0 +1,58 @@
+//=============================================================================
+//
+//   File : kvirc.rc
+//   Creation date : Unknown by Szymon Stefanek
+//
+//   This file is part of the KVIrc IRC client distribution
+//   Copyright (C) 2009 Szymon Stefanek (pragma at kvirc dot net)
+//
+//   This program is FREE software. You can redistribute it and/or
+//   modify it under the terms of the GNU General Public License
+//   as published by the Free Software Foundation; either version 2
+//   of the License, or (at your option) any later version.
+//
+//   This program is distributed in the HOPE that it will be USEFUL,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+//   See the GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License
+//   along with this program. If not, write to the Free Software Foundation,
+//   Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+//
+//=============================================================================
+
+#include "version.h"
+
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+IDD_ICON2               ICON    DISCARDABLE     "kvs.ico"
+IDD_ICON3               ICON    DISCARDABLE     "kvc.ico"
+IDD_ICON4               ICON    DISCARDABLE     "kvt.ico"
+IDD_ICON5               ICON    DISCARDABLE     "kva.ico"
+
+1 VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEOS         	0x40004L
+FILETYPE       	0x2L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",        VER_COMPANYNAME_STR
+            VALUE "FileDescription",    VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",        VER_FILEVERSION_STR
+            VALUE "InternalName",       VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",     VER_LEGALCOPYRIGHT_STR
+            VALUE "OriginalFilename",   VER_ORIGINALFILENAME_STR
+            VALUE "ProductName",        VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END

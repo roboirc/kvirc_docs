@@ -1,0 +1,13 @@
+Host github
+HostName github.com
+User git
+IdentityFile ~/kvirc-github-key
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null
+
+Host artifacts
+HostName 185.177.21.106
+User kvirc-travis
+IdentityFile ~/kvirc-artifacts-key
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null

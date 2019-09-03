@@ -1,0 +1,50 @@
+# CMakeLists for src/modules/options
+
+set(kvioptions_SRCS
+	libkvioptions.cpp
+	OptionsWidgetContainer.cpp
+	OptionsDialog.cpp
+	OptionsInstanceManager.cpp
+	OptionsWidget_antiSpam.cpp
+	OptionsWidget_avatar.cpp
+	OptionsWidget_channel.cpp
+	OptionsWidget_connection.cpp
+	OptionsWidget_ctcp.cpp
+	OptionsWidget_ctcpFloodProtection.cpp
+	OptionsWidget_dcc.cpp
+	OptionsWidget_general.cpp
+	OptionsWidget_alertsAndHighlighting.cpp
+	OptionsWidget_identity.cpp
+	OptionsWidget_ignore.cpp
+	OptionsWidget_input.cpp
+	OptionsWidget_interfaceFeatures.cpp
+	OptionsWidget_theme.cpp
+	OptionsWidget_irc.cpp
+	OptionsWidget_ircOutput.cpp
+	OptionsWidget_ircView.cpp
+	OptionsWidget_lag.cpp
+	OptionsWidget_logging.cpp
+	OptionsWidget_mediaTypes.cpp
+	OptionsWidget_message.cpp
+	OptionsWidget_nickserv.cpp
+	OptionsWidget_notify.cpp
+	OptionsWidget_notifier.cpp
+	OptionsWidget_protection.cpp
+	OptionsWidget_proxy.cpp
+	OptionsWidget_query.cpp
+	OptionsWidget_servers.cpp
+	OptionsWidget_sound.cpp
+	OptionsWidget_windowList.cpp
+	OptionsWidget_textEncoding.cpp
+	OptionsWidget_textIcons.cpp
+	OptionsWidget_tools.cpp
+	OptionsWidget_topicLabel.cpp
+	OptionsWidget_away.cpp
+	OptionsWidget_uparser.cpp
+	OptionsWidget_urlHandlers.cpp
+	OptionsWidget_userList.cpp
+	OptionsWidget_tray.cpp
+)
+
+set(kvi_module_name kvioptions)
+include(${CMAKE_SOURCE_DIR}/cmake/module.rules.txt)

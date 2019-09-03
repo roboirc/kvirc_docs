@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the KVIrc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KVIrc 4.9.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-09 14:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/modules/notifier/NotifierWindow.cpp:929
+msgid "Show/Hide input line"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:930
+msgid "Hide"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:933
+msgid "1 Minute"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:934
+msgid "5 Minutes"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:935
+msgid "15 Minutes"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:936
+msgid "30 Minutes"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:937
+msgid "1 Hour"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:939
+msgid "Until KVIrc is Restarted"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:940
+msgid "Permanently (Until Explicitly Enabled)"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:942
+msgid "Disable"
+msgstr ""
+
+#: src/modules/notifier/NotifierWindow.cpp:1016
+msgid "Write text or commands to window"
+msgstr ""
+
+#: src/modules/notifier/libkvinotifier.cpp:135
+msgid "The specified window does not exist"
+msgstr ""
+
+#: src/modules/notifier/libkvinotifier.cpp:149
+msgid "The specified timeout is not valid, assuming 0"
+msgstr ""
+
+#: src/modules/notifier/libkvinotifier.cpp:154
+msgid "The -t switch expects a timeout in seconds"
+msgstr ""
