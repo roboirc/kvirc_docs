@@ -1,0 +1,13 @@
+/home/gmagoon/Downloads/KVIrc/src/modules/log/kvilog_autogen/mocs_compilation.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/log/libkvilog.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/log/kvilog_autogen/moc_predefs.h
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogFile.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogViewWidget.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogViewWindow.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/kvilogview_autogen/EWIEGA46WW/moc_LogViewWindow.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/kvilogview_autogen/mocs_compilation.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/libkvilogview.cpp
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogFile.h
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogViewWidget.h
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/LogViewWindow.h
+/home/gmagoon/Downloads/KVIrc/src/modules/logview/kvilogview_autogen/moc_predefs.h
