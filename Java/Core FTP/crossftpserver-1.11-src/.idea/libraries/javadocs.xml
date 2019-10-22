@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javadocs">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Java .jar libraries/pircbot-1.5.0.zip!/pircbot-1.5.0/javadocs" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
