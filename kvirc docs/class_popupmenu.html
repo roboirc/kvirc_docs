@@ -82,51 +82,56 @@ You add items with insertItem(). An item can be a string. In addition, items can
   <tr bgcolor="#EAEAEA">
     <td></td></tr><tr><td class="example-box">
 <pre>
-// note: this code is designed for executing in Script Tester
-// you would design this differently if you are using classes
+	
+// note: this code is designed for executing in Script Tester<br>
+// you would design this differently if you are using classes<br>
+<br>
+// create a base widget<br>
+%Kapp = $new(widget)<br>
+<br>
 
-// create a base widget
-%Kapp = $new(widget)
+// create a submenu for the popup menu<br>
+%subMenu = $new(popupmenu)<br>
+%submenu->$setTitle("Sub Menu")<br>
+<br>
 
-// create a submenu for the popup menu
-%subMenu = $new(popupmenu)
-%submenu->$setTitle("Sub Menu")
-// assign the returned uid to a hash key, and give it a string name we can use in the slot (handler)
-%PumIds{"%subMenu->$insertItem("Extra stuff 1", 302)"} = "Extra stuff 1"
-%PumIds{"%subMenu->$insertItem("Extra stuff 2", 303)"} = "Extra stuff 2"
-%PumIds{"%subMenu->$insertItem("Extra stuff 3", 304)"} = "Extra stuff 3"
-%subMenu->$insertSeparator(0)
-%PumIds{"%subMenu->$insertItem("Extra stuff 4", 305)"} = "Extra stuff 4"
-%PumIds{"%subMenu->$insertItem("Extra stuff 5", 306)"} = "Extra stuff 5"
+// assign the returned uid to a hash key, and give it a string name we can use in the slot (handler)<br>
+%PumIds{"%subMenu->$insertItem("Extra stuff 1", 302)"} = "Extra stuff 1"<br>
+%PumIds{"%subMenu->$insertItem("Extra stuff 2", 303)"} = "Extra stuff 2"<br>
+%PumIds{"%subMenu->$insertItem("Extra stuff 3", 304)"} = "Extra stuff 3"<br>
+%subMenu->$insertSeparator(0)<br>
+%PumIds{"%subMenu->$insertItem("Extra stuff 4", 305)"} = "Extra stuff 4"<br>
+%PumIds{"%subMenu->$insertItem("Extra stuff 5", 306)"} = "Extra stuff 5"<br>
+<br>
+// create the primary popup menu<br>
+%Kapp->%pumOppClick = $new(popupmenu, %Kapp)<br>
+%Kapp->%pumOppClick->$setTitle("Popup Menu")<br>
+%PumIds{"%Kapp->%pumOppClick->$insertItem("File", $icon("file"))"} = "File"<br>
+%PumIds{"%Kapp->%pumOppClick->$insertItem("Edit", $icon("editor"))"} = "Edit"<br>
+%PumIds{"%Kapp->%pumOppClick->$insertItem("Help", $icon("help"))"} = "Help"<br>
+<br>
+// add the submenu to the primary menu<br>
+%Kapp->%pumOppClick->$addMenu(%submenu, 0)<br>
+<br>
+// when we click the mouse, the popup menu will appear<br>
+privateimpl (%Kapp, mousePressEvent)<br>
+{<br>
+	@%pumOppClick->$exec()<br>
+}<br>
+<br>
+// when we click something in the popup menu, this handler will execute<br>
+privateimpl (%Kapp, handlePopupEvent)<br>
+{<br>
+	// $0 will contain the uid of the popup menu item that was clicked<br>
+	debug -c "Popup Menu Item: %PumIds{$0}";<br>
+}<br>
+<br>
+// connect the primary popupmenu's "activated" signal to the %Kapp's "handlePopupEvent" slot<br>
+objects.connect %Kapp->%pumOppClick activated %Kapp handlePopupEvent<br>
+<br>
+// display the base widget on screen<br>
+%Kapp->$show()<br>
 
-// creat the primary popup menu
-%Kapp->%pumOppClick = $new(popupmenu, %Kapp)
-%Kapp->%pumOppClick->$setTitle("Popup Menu")
-%PumIds{"%Kapp->%pumOppClick->$insertItem("File", $icon("file"))"} = "File"
-%PumIds{"%Kapp->%pumOppClick->$insertItem("Edit", $icon("editor"))"} = "Edit"
-%PumIds{"%Kapp->%pumOppClick->$insertItem("Help", $icon("help"))"} = "Help"
-
-// add the submenu to the primary menu
-%Kapp->%pumOppClick->$addMenu(%submenu, 0)
-
-// when we click the mouse, the popup menu will appear
-privateimpl (%Kapp, mousePressEvent)
-{
-	@%pumOppClick->$exec()
-}
-
-// when we click something in the popup menu, this handler will execute
-privateimpl (%Kapp, handlePopupEvent)
-{
-	// $0 will contain the uid of the popup menu item that was clicked
-	debug -c "Popup Menu Item: %PumIds{$0}";
-}
-
-// connect the primary popupmenu's "activated" signal to the %Kapp's "handlePopupEvent" slot
-objects.connect %Kapp->%pumOppClick activated %Kapp handlePopupEvent
-
-// display the base widget on screen
-%Kapp->$show()
 </pre>
 </td></tr><tr><td bgcolor="#EAEAEA">
 </td>
