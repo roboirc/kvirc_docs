@@ -21,8 +21,8 @@ body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px
     <td class='title-table-cell'>
       <div class='title-text'>Variables and Data types</div>      <div class='title-secondary-text'>All about the KVS variable and datatype management</div>    </td>
   </tr>
-  <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic syntax</div></td></tr><tr><td bgcolor="#EAEAEA">
+  <tr bgcolor="#FFFFFF">
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic syntax</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 A variable identifier is composed by a '%' (percent) sign followed
 by a sequence of letters, digits or underscores.
@@ -35,13 +35,13 @@ Examples of valid variable names are:
 <span class="example-variable">%thisisavar</span><br>
 <span class="example-variable">%2ndName</span><br>
 <span class="example-variable">%_hidden</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Variables are created when you assign something to them: there is no need
 for a declaration (unlike other languages such as C/C++, Java or VB).
 </td></tr><tr><td class="example-box"><br>
 <span class="comment-text"># create a variable named <span class="example-variable">%X</span> by assigning the value 10 to it</span><br>
-<span class="example-variable">%X</span> = 10<br>
+<span class="example-variable">%X</span> = 10<br><br>
 <span class="comment-text"># use the variable</span><br>
 echo "The value of X is" <span class="example-variable">%X</span><br>
 </td></tr><tr><td bgcolor="#EAEAEA">
@@ -56,7 +56,7 @@ Local variables start with a <b>lowercase letter</b> while the global ones with 
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%var</span> = 10; <span class="comment-text"># this is a local variable</span><br>
 <span class="example-variable">%Var</span> = 10; <span class="comment-text"># this is a global variable</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 You can also force a variable that start with a lowercase letter to be global
 by pre-declaring it with the <a href="cmd_global.html">global</a> keyword.
@@ -64,30 +64,29 @@ by pre-declaring it with the <a href="cmd_global.html">global</a> keyword.
 <span class="comment-text"># copy this script to a file and run /<a href="cmd_parse.html">parse</a> &lt;filename&gt;</span><br>
 global <span class="example-variable">%a</span><br>
 <span class="example-variable">%a</span> = "The contents of the variable a"<br>
-<span class="example-variable">%b</span> = "The contents of the variable b"<br>
+<span class="example-variable">%b</span> = "The contents of the variable b"<br><br>
 <span class="comment-text"># <span class="example-variable">%a</span> is a global variable now : all the other scripts can see its value</span><br>
 <span class="comment-text"># <span class="example-variable">%b</span> is a local variable and no other scripts can see its value</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 If you have executed the example above from a file (by the means of <a href="cmd_parse.html">parse</a>)
 then now you can type
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 in the commandline to see the contents of the variable %a.
 If you also try
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> <span class="example-variable">%b</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 you will see nothing printed since %b was local to the parsed script.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Data types</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Data types</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 KVS has three main categories of data types: scalars, arrays and associative
 arrays (also known as dictionaries or hashes).
-</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Scalars</div></td></tr><tr><td bgcolor="#EAEAEA">
-<br>
+</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Scalars</div></td></tr><tr><td bgcolor="#FFFFFF">
 The scalars are simple variables containing a single value (a string or an integer).
 </td></tr><tr><td class="example-box"><br>
 <span class="comment-text"># <span class="example-variable">%a</span> is a scalar variable</span><br>
@@ -96,13 +95,13 @@ The scalars are simple variables containing a single value (a string or an integ
 <span class="example-variable">%a</span> = 24.5<br>
 <a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span><br>
 </td></tr><tr><td bgcolor="#EAEAEA">
-</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Arrays</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Arrays</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Arrays are collections of items indexed by integers. The array items
 are selected by placing the index in square brackets just after the array name.
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%arrayName</span>[index]<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 An easy way to create an array is to use the <a href="fnc_array.html">$array</a> function.
 </td></tr><tr><td class="example-box"><br>
@@ -111,21 +110,21 @@ An easy way to create an array is to use the <a href="fnc_array.html">$array</a>
 <span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;echo <span class="example-variable">%a</span>[<span class="example-variable">%i</span>]; <span class="comment-text"># Accessing the <span class="example-variable">%i</span>'th element of the array</span><br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Note that in the example above %a refers to the whole array while %a[%i] refers
 to one of its elements, in particular the one with index %i.
 You also create an array by explicitly assigning to one of its elements:
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span>[9] = "This is an array element";<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Array indexes are zero-based so in the example above you have created an array
 with 10 items. You can find out an array's length with the <a href="fnc_length.html">$length</a>() function.
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span>[9] = "This is an array element";<br>
 echo $length<span class="example-paren">(</span><span class="example-variable">%a</span><span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Be aware that by making such an assignment you implicitly consume some memory for
 all the preceding array items (even if they are unset). This means that
@@ -133,8 +132,13 @@ a simple instruction like the following may eat a huge amount of memory at once:
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span>[1000000] = "An array element faaaaaar away...";<br>
 echo $length<span class="example-paren">(</span><span class="example-variable">%a</span><span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
-</td></tr><tr><td class="note-box"></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Food for thought:</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td>
+</tr><tr><td bgcolor="#FFFFFF"></td></tr>
+
+<tr><td class="note-box"></td></tr>
+<tr><td class="subtitle-table-cell"><div class="subtitle-text">Food for thought:</div></td></tr>
+
+<tr><td bgcolor="#FFFFFF">
 KVIrc allocates a pointer for each item in the array. The pointer is
 empty when the item is unset and points to an additional block
 of memory when the item is set. The size of a pointer is platform
@@ -144,7 +148,7 @@ and on the contents of the item... it's average value may
 be around 16 bytes. The array size is determined by the last SET element index.
 All this this means that in the worst case (64 bit assumption) an array in
 that the highest indexed item set is N eats up at least N*8+16 bytes of memory.
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 Besides the traditional indexed looping method you
 can also use the <a href="cmd_foreach.html">foreach</a> command to iterate the items of an array.
 Be aware that <a href="cmd_foreach.html">foreach</a> will <b>not</b> iterate over unset items in the
@@ -155,10 +159,10 @@ array unless you use the -a switch.
 <span class="example-variable">%Array</span>[2]=Paperino<br>
 <span class="example-variable">%Array</span>[5]=Prova<br>
 <a href="cmd_foreach.html">foreach</a><span class="example-paren">(</span><span class="example-variable">%item</span>,<span class="example-variable">%Array</span><span class="example-paren">)</span><a href="cmd_echo.html">echo</a> Got Item: <span class="example-variable">%item</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Note that the items 3 and 4 are simply skipped.
-</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Hashes</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subsubtitle-table-cell"><div class="subsubtitle-text">Hashes</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 The hashes are collections of items indexed by strings: the word <i>hash</i>
 is in fact a shortcut for <i>hashtable</i>. In literature hashes are also called
@@ -167,7 +171,7 @@ The hash items are selected by placing the key in curly brackets
 just after the hash name.
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%hashName</span><span class="example-bracket">{</span>key<span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 An easy way to create a hash is to use the <a href="fnc_hash.html">$hash</a> function.
 </p>
@@ -177,18 +181,18 @@ An easy way to create a hash is to use the <a href="fnc_hash.html">$hash</a> fun
 <span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;echo "KEY:" <span class="example-variable">%key</span> "VALUE:" <span class="example-variable">%a</span><span class="example-bracket">{</span><span class="example-variable">%key</span><span class="example-bracket">}</span>;<br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Note that in the example above %a refers to the whole hash while %a{%i} refers
 to one of its elements, in particular the one with the key %key.
 You also create a hash by explicitly assigning to one of its elements:
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span><span class="example-bracket">{</span>"MyKey"<span class="example-bracket">}</span> = "MyValue"<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 You may have already noticed that the <a href="fnc_keys.html">$keys</a>() function returns
 the array of the hash keys: it is useful to iterate over the hash items.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Mutability of variables</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Mutability of variables</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 KVS is not strictly typed: any variable can assume different type identities at different times,
 even in the same script.
@@ -199,7 +203,7 @@ even in the same script.
 <span class="example-variable">%a</span> = $array<span class="example-paren">(</span>"element1","element2","element3"<span class="example-paren">)</span>;<br>
 <span class="comment-text"># <span class="example-variable">%a</span> becomes a hash with two values</span><br>
 <span class="example-variable">%a</span> = $hash<span class="example-paren">(</span>"key1","value1","key2","value2"<span class="example-paren">)</span>;<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 In literature this kind of variable is called <b>variant</b> and this is the
 term that you will find all around the documentation when an explicit
@@ -213,7 +217,7 @@ However remember that hash keys are strings and not variants so you can't use an
 <span class="example-variable">%a</span>[16][16] = 10<br>
 <span class="comment-text"># a hash of hashes: here we eat just two memory locations</span><br>
 <span class="example-variable">%a</span><span class="example-bracket">{</span>"16"<span class="example-bracket">}{</span>"16"<span class="example-bracket">}</span> = 10<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 In most cases the KVS engine manages automatically the conversion between data types.
 For example, when you put an array in a place where a scalar is requested, KVIrc
@@ -221,7 +225,7 @@ automatically transforms it to a scalar string by joining all the items with a c
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span> = $array<span class="example-paren">(</span>"element1","element2","element3"<span class="example-paren">)</span>;<br>
 echo <span class="example-variable">%a</span>; <span class="comment-text"># echo expects its arguments to be scalar</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Conversely, when you put a scalar in place of an array, KVIrc automatically
 transforms it to an array with a single item. In this way a function like
@@ -232,7 +236,7 @@ the conversion is automatic the cast is said to be <b>implicit</b>.
 <br>
 KVS handles also the other possible implicit casts: scalar-&gt;hash,hash-&gt;scalar,array-&gt;hash,hash-&gt;array.
 Experiment with it.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">More about scalars</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">More about scalars</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Internally KVS is implicitly typed: the <i>scalar</i> data type is in fact
 a set of types that KVIrc manages silently. The types are: integer, string, real, boolean and hobject.
@@ -265,13 +269,13 @@ echo $typeof<span class="example-paren">(</span><span class="example-variable">%
 echo $typeof<span class="example-paren">(</span><span class="example-variable">%a</span><span class="example-paren">)</span><br>
 <span class="example-variable">%a</span> = "test"<br>
 echo $typeof<span class="example-paren">(</span><span class="example-variable">%a</span><span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 There is also another subtle type of scalar called <i>nothing</i>. It stands for an empty (unset) variable.
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%a</span> = $nothing<br>
 echo $typeof<span class="example-paren">(</span><span class="example-variable">%a</span><span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Nothing is something in between a data type and a special value for all the other data types:
 it represents absence of information.
@@ -281,7 +285,7 @@ unset a variable.
 <br>
 Again, when possible, the conversion between nothing and the other data types is
 performed automatically. Nothing becomes an empty string, a null object handle or an empty array.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Explicit casts</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Explicit casts</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 You can make explicit conversions between some data types by using the casting functions.
 <a href="fnc_integer.html">$integer</a>() will attempt to convert the variant parameter to an integer, <a href="fnc_real.html">$real</a>()
@@ -296,7 +300,7 @@ As stated several times in this document, KVS tries to manage the casts automati
 so you usually don't need to care about it. The explicit casts are provided for
 the very few cases where an automatic conversion would lead to an unexpected value (for your script)
 and for writer's clarity.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">More about variables life-cycle</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">More about variables life-cycle</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 As stated above variables start their existence when you assign something to them.
 After a variable has been created it persists until it goes out of his scope (remember
@@ -311,7 +315,7 @@ The first method to explicitly destroy a variable is to call <a href="cmd_unset.
 <span class="example-variable">%b</span> = 10<br>
 <span class="example-variable">%c</span> = "just a string that eats memory"<br>
 <a href="cmd_unset.html">unset</a> <span class="example-variable">%a</span>,<span class="example-variable">%b</span>,<span class="example-variable">%c</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 The KVS engine treats unset variables just like empty strings. The opposite is also valid: empty
 strings behave like empty (unset) variables. This means that you can assign an empty string
@@ -321,11 +325,11 @@ to a variable to unset it.
 <span class="example-variable">%b</span> = "test2";<br>
 <span class="example-variable">%a</span> = ""; <span class="comment-text"># <span class="example-variable">%a</span> is in fact unset</span><br>
 <span class="example-variable">%b</span> = ; <span class="comment-text"># syntactically this is just the same as above</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Note that because of mutability of variables (explained above) you can use the empty string
 assignment also to free arrays and hashes.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Extended scope variables</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Extended scope variables</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Beside local and global variables there is a third family of them.
 Variables that have a ':' character just after the leading '%' are <b>extended scope</b> variables.
@@ -340,7 +344,7 @@ are visible during all the "lifetime" of a popup (so from the prologue code call
 the moment when the user selects an item and the corresponding code is executed).
 This allows you to pre-calculate some data or conditions in the popup prologue
 and use this data in the popup item conditions and item handlers.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Variable evaluation</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Variable evaluation</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 A variable can appear in every place where a parameter
 is expected: so after the command name, after a switch or inside
@@ -348,13 +352,13 @@ an identifier parameters. The KVS parser will try to extract the longest possibl
 name after a literal percent '%' sign everywhere in the parameter string. So the command sequence
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%number</span> = 1st; echo this is my <span class="example-variable">%number</span> variable test<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 will first assign <i>1st</i> to the variable <i>%number</i> and then execute
 "echo this is my 1st variable test". The following example will <b>not</b> work as expected.
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%number</span> = 1; echo this is my <span class="example-variable">%numberst</span> variable test<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 KVS will assign <b>1</b> to %number in this case but the next variable
 name extracted will be <i>%numberst</i> that is actually empty; so finally
@@ -363,7 +367,7 @@ To avoid this problem you can use the backslash escape character:
 </td></tr><tr><td class="example-box"><br>
 <span class="example-variable">%number</span> = 1; echo this is my <span class="example-variable">%number</span>\st variable test<br>
 </td></tr><tr><td bgcolor="#EAEAEA">
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Putting it all together</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Putting it all together</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Variables can be either local, global or have an extended scope. Their start to exist
 when you first assign something to them and they disappear when they go out of their

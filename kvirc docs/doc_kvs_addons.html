@@ -21,8 +21,8 @@ body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px
     <td class='title-table-cell'>
       <div class='title-text'>The KVIrc addon system</div>      <div class='title-secondary-text'>Writing KVIrc addons</div>    </td>
   </tr>
-  <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+  <tr bgcolor="#FFFFFF">
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 An addon is basically a set of KVS scripts, multimedia, documentation
 and accessory files that implement a KVIrc feature.
@@ -33,13 +33,13 @@ KVIrc has a builtin addon management system that allows the users to create,
 install, configure and uninstall features with a nice graphical interface.
 The management system allows the addons to have documentation integrated in
 the KVIrc help and to be translated in several languages.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#FFFFFF">
 The addons are usually shipped in compressed archives (.kva). KVIrc will look
 for the installer file called <i>install.kvs</i> and executes it when the user will
 ask for your addon to be installed. The install.kvs contains the code for the
 <b>registration</b> of your addon and will <a href="cmd_include.html">include</a> all the other
 necessary source files.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The minimal addon</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The minimal addon</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 The smallest addon that you can write is the one that does nothing.
 </td></tr><tr><td class="example-box"><br>
@@ -52,7 +52,7 @@ The smallest addon that you can write is the one that does nothing.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"MyAddon_32.png"<span class="example-paren">)</span><br>
 <span class="example-bracket">{</span><br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The code above does nothing but registers the <i>MyAddon</i> addon.
 <br>
 The first parameter is the internal addon ID which can be used to identify
@@ -88,8 +88,8 @@ alias<span class="example-paren">(</span>MyAddon::uninstall::uninstall<span clas
 <span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;...<br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A typical addon layout</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A typical addon layout</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 As stated above, the addons are usually shipped in a compressed archive.
 Once uncompressed, the installer will check the directory tree containing the
@@ -163,7 +163,7 @@ defpopup<span class="example-paren">(</span>"MyAddon"<span class="example-paren"
 <span class="comment-text"># Set options</span><br>
 option boolAutoAcceptDccSend 1<br>
 option boolShowMinimizedDebugWindow 1<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 </p>
 <p>
 The main <b>source directory</b> for your addon have to be named <i>src</i> and must
@@ -177,7 +177,7 @@ MyAddon_classes_database.kvs<br>
 MyAddon_classes_gui_options.kvs<br>
 <span class="comment-text"># A script containing some logging functions</span><br>
 MyAddon_functions_logging.kvs<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 The <b>locale</b> directory should contain the *.mo files for your translations.
 The localization process of a script is explained in <a href="doc_localization.html">this document</a>.
@@ -197,7 +197,7 @@ with the language code also used for the translation files (like <i>en</i>, <i>i
 etc...).
 Please note that English is the default language and KVIrc will
 fallback to the <i>en</i> subdirectory when no other language is found around...
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Some examples</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Some examples</div></td></tr><tr><td bgcolor="#FFFFFF">
 The code below is just an example of how to write a useful initialization of
 your own addon. The name of the classes refer to the ones described above.
 </td></tr><tr><td class="example-box"><br>
@@ -255,8 +255,8 @@ alias<span class="example-paren">(</span>MyAddon::config::load<span class="examp
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%Key</span> = <a href="fnc_config.read.html">$config.read</a><span class="example-paren">(</span><span class="example-variable">%c</span>,"Key",2<span class="example-paren">)</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;...<br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The help and configuration callbacks</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The help and configuration callbacks</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Each addon can have a help and a configuration callback. These are set
 respectively by <a href="cmd_addon.sethelpcallback.html">addon.sethelpcallback</a> and <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>.
@@ -274,7 +274,7 @@ your addon from the addon management dialog. This callback is useful
 mainly for more complex graphical scripts that can show up a dialog
 that allows configuring all of the addon features. To use this callback
 you will probably need some object scripting.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The real addon work</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The real addon work</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 The real addon work is done by the scripts contained in the src directory.
 They will likely add aliases (maybe in a nice namespace named against your addon),
@@ -286,7 +286,7 @@ Remember that you must clean up <b>everything</b> in your uninstallation callbac
 This means that you must remove the aliases, unregister the event handlers,
 destroy the actions, kill the timers and the object classes you've created.
 Be a clean coder :)
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Where to start</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Where to start</div></td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 It is a good idea to start in the KVIrc scripts GitHub repository https://github.com/kvirc/kvirc-scripts. There are surely
 several addons to look at. Pick one that seems simple and analyze its layout and code

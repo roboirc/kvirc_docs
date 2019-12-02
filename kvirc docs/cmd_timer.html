@@ -34,7 +34,10 @@ body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px
     <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>Starts a new timer named &lt;name&gt; with the specified delay (in milliseconds).<br>
+    <td>
+		
+		<h3>
+		Starts a new timer named &lt;name&gt; with the specified delay (in milliseconds).<br>
 The timer periodically calls the specified &lt;callback_command&gt; code passing the
 eventual &lt;callback_param&gt; strings as positional parameters.<br>
 If a timer with the same name already exists, it is replaced by this one.<br>
@@ -61,6 +64,8 @@ Since all the KVIrc timers share the same namespace it is a good idea to use
 descriptive timer names: a timer named <i>a</i> is likely to be used by two or more scripts
 at once causing one (or both) of them to fail.<br>
 A timer can be stopped at any time by using the <a href="cmd_killtimer.html">killtimer</a> command.
+
+</h3>
 </td>
   </tr>
   <tr>
@@ -80,15 +85,15 @@ A timer can be stopped at any time by using the <a href="cmd_killtimer.html">kil
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="example-box"><br>
+    <td></td></tr><tr><td class="example-box">
 <span class="comment-text"># Just a plain timer</span><br>
-timer<span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "Hello!"; <span class="example-bracket">}</span><br>
+timer<span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "Hello!"; <span class="example-bracket">}</span><br><br>
 <span class="comment-text"># Now watch the timer running</span><br>
-killtimer test<br>
+killtimer test<br><br>
 <span class="comment-text"># Single shot timer</span><br>
-timer -s <span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "This will fire only once!"; <span class="example-bracket">}</span><br>
+timer -s <span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "This will fire only once!"; <span class="example-bracket">}</span><br><br>
 <span class="comment-text"># The call above is equivalent to</span><br>
-timer<span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "This will file only once!"; killtimer test; <span class="example-bracket">}</span><br>
+timer<span class="example-paren">(</span>test,1000<span class="example-paren">)</span><span class="example-bracket">{</span> echo "This will file only once!"; killtimer test; <span class="example-bracket">}</span><br><br>
 <span class="comment-text"># Callback parameters: consider the following code</span><br>
 <span class="example-variable">%parameter</span> = "some string value"<br>
 echo "Before calling /timer \<span class="example-variable">%parameter</span> is \"<span class="example-variable">%parameter</span>\""<br>
@@ -108,9 +113,9 @@ timer<span class="example-paren">(</span>test,1000<span class="example-paren">)<
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># This will kill the current timer, we don't need to specify the name<br>
 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_killtimer.html">killtimer</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span><br>
-<span class="example-bracket">}</span><br>
+<span class="example-bracket">}</span><br><br>
 <span class="comment-text"># Use isTimer to check if the timer exists</span><br>
-<a href="cmd_echo.html">echo</a> <a href="fnc_istimer.html">$istimer</a><span class="example-paren">(</span>test<span class="example-paren">)</span><br>
+<a href="cmd_echo.html">echo</a> <a href="fnc_istimer.html">$istimer</a><span class="example-paren">(</span>test<span class="example-paren">)</span><br><br>
 <span class="comment-text"># Repeat the command above after the 10th timeout...</span><br>
 </td></tr><tr><td bgcolor="#EAEAEA">
 </td></tr><tr><td class="example-box"><br>
@@ -122,7 +127,7 @@ if<span class="example-paren">(</span><span class="example-variable">%secsdiff</
 <span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">#we're past that time for today<br>
 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%secsdiff</span>+=86400; #60 secs * 60 mins * 24 hours<br>
-<span class="example-bracket">}</span><br>
+<span class="example-bracket">}</span><br><br>
 <span class="comment-text"># timer wants msecs<br>
 </span><span class="example-variable">%msecs</span> = $<span class="example-paren">(</span><span class="example-variable">%secsdiff</span>*1000<span class="example-paren">)</span>;<br>
 timer -s -p <span class="example-paren">(</span>reminder, <span class="example-variable">%msecs</span><span class="example-paren">)</span><br>

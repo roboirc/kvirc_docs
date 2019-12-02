@@ -21,7 +21,7 @@ body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px
     <td class='title-table-cell'>
       <div class='title-text'>Events</div>      <div class='title-secondary-text'>Events: user reactions</div>    </td>
   </tr>
-  <tr bgcolor="#EAEAEA">
+  <tr bgcolor="#FFFFFF">
     <td>KVIrc triggers an event when a particular situation occurs.<br>
 You can define a set of event handlers for each event type.<br>
 An event handler is a snippet of user-defined code that gets executed when the event is triggered.<br>
@@ -37,7 +37,7 @@ adds a handler to the OnIRC event that joins three channels:
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Auto-joining my preferred channels...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_join.html">join</a> #kvirc,#siena,#linux<br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 Now try to connect to a server and you'll see that it joins automatically the three channels!.<br>
 You might also want to do some other actions just after the connection has been established,
 for example you might want to look immediately for a friend of yours by issuing a <a href="cmd_whois.html">whois</a>
@@ -49,12 +49,12 @@ You can add the <a href="cmd_whois.html">whois</a> request to the handler above 
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Looking for fred...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_whois.html">whois</a> fred<br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 (An even nicer idea would be to use the <a href="cmd_awhois.html">awhois</a> command, but that's left to the reader as an exercise.<br>
 To remove an event handler you still use the <a href="cmd_event.html">event</a> command, but with an empty code block:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_event.html">event</a><span class="example-paren">(</span>OnIRC,lookforfred<span class="example-paren">)</span><span class="example-bracket">{}</span><br><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 <br>
 Certain events will pass you some data in the positional parameters.<br>
 For example, when you are being banned from a channel, KVIrc triggers the <a href="event_onmeban.html">onmeban</a>

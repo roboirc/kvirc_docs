@@ -21,17 +21,17 @@ body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px
     <td class='title-table-cell'>
       <div class='title-text'>KVS Functions and aliases</div>      <div class='title-secondary-text'>KVS Functions and aliases</div>    </td>
   </tr>
-  <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+  <tr bgcolor="#FFFFFF">
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#FFFFFF">
 Since you're here, you should already have read about the <a href="doc_kvs_basicconcepts.html">KVS basic concepts</a>
 and have visited the <a href="doc_commands.html">command index</a>. If you feel ready to take the next step
 then read on.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Functions</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Functions</div></td></tr><tr><td bgcolor="#FFFFFF">
 KVS has many internal <a href="doc_functions.html">functions</a> that can be used as command parameters.<br>
 <b>All the function names start with a literal <b>$</b> character.</b>
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> This window caption is <a href="fnc_window.caption.html">$window.caption</a><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The <a href="fnc_window.caption.html">$window.caption</a> <a href="doc_functions.html">function</a>
 is evaluated before the command executes,
 and it is changed into the current window caption text.
@@ -39,7 +39,7 @@ The <a href="doc_functions.html">functions</a> can be used also as switch parame
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> -w = <a href="fnc_window.html">$window</a> This text will be surely \<br>
 &nbsp; &nbsp; printed in the current window<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The -w switch allows to redirect the echo text to a specified window --- in this
 case the one that you are typing in.<br>
 <i>(Surprise: in this case the -w switch is useless,
@@ -57,7 +57,7 @@ where &lt;parameter_list&gt; is a list of comma separated parameters,
 eventually empty.
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> The word 'neural' is <a href="fnc_str.len.html">$str.len</a><span class="example-paren">(</span>neural<span class="example-paren">)</span> characters long<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The function <a href="fnc_str.len.html">$str.len</a> accepts a single parameter and returns the
 length in characters of the parameter string. The returned value is always
 a string: in this case it can be also interpreted as a number.<br>
@@ -67,16 +67,16 @@ So the following two calls are equal:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> <a href="fnc_window.caption.html">$window.caption</a><br>
 <a href="cmd_echo.html">echo</a> [fnc]$window.caption<span class="example-paren">()</span>[/fnc]<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 If you want to pass an <i>empty</i> string as the first parameter you have to use
 the following syntax:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> <a href="fnc_str.len.html">$str.len</a><span class="example-paren">(</span>""<span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 Obviously a function is valid as a function parameter.
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> <a href="fnc_str.len.html">$str.len</a><span class="example-paren">(</span><a href="fnc_window.caption.html">$window.caption</a><span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 If you want to place a literal '(' or ')' in the function parameters
 you must escape it.
 A special case for when you want to use 'matching' parentheses:
@@ -84,10 +84,10 @@ an opened '(' corresponds to a closed ')'.
 In this case you can omit the 'escape' character.
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> The length of '<span class="example-paren">(</span>a+b<span class="example-paren">)</span>' is : <a href="fnc_str.len.html">$str.len</a><span class="example-paren">(</span> <span class="example-paren">(</span>a+b<span class="example-paren">)</span> <span class="example-paren">)</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This is useful for algebraic and boolean expressions, like the ones
 accepted by the special function $() (see next paragraphs).
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Aliases</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Aliases</div></td></tr><tr><td bgcolor="#FFFFFF">
 An alias is a user defined command. It can be used to rename the builtin KVIrc commands or functions,
 to automate complex tasks or as a means for structured programming.
 Aliases can be created or destroyed by using the scriptcenter (graphic interface)
@@ -100,16 +100,16 @@ simply <b>j</b> .. just to type it faster.
 Nothing easier in KVIrc: just try this commandline:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_alias.html">alias</a><span class="example-paren">(</span>j<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_join.html">join</a> $0-; <span class="example-bracket">}</span>;<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This will create the alias <b>j</b>. From this moment you can use /j as if it was a normal command.
 </td></tr><tr><td class="example-box"><br>
 j #kvirc<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 You may have noticed the strange $0- function in the alias body - it stands for
 <i>all parameters passed to the alias</i>. This means that when you call
 </td></tr><tr><td class="example-box"><br>
 j #kvirc testpassword<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 then both the parameters (#kvirc and testpassword) are passed to the join command.
 The $N functions are special functions that return the positional parameters passed
 to the current script context. In an alias the script context is the script body and
@@ -124,7 +124,7 @@ all the parameters starting from the first one.
 To remove an alias, use the alias command again with an empty body:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_alias.html">alias</a><span class="example-paren">(</span>j<span class="example-paren">)</span><span class="example-bracket">{}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This will remove the alias <b>j</b> defined above.
 <br>
 A common task in channel management is the kick & ban action.
@@ -135,11 +135,11 @@ It could be a nice idea to have a single <b>kb</b> command to perform this actio
 Well...easy:
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_alias.html">alias</a><span class="example-paren">(</span>kb<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_ban.html">ban</a> $0; <a href="cmd_kick.html">kick</a> $0-; <span class="example-bracket">}</span>;<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This adds the <b>kb</b> alias - it can be called as a normal command:
 </td></tr><tr><td class="example-box"><br>
 kb spammer You're not welcome here!<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This will first execute <i>ban spammer</i> and then <i>kick spammer with; You're not welcome here</i>.
 Our kb is a really simple example... it doesn't check for the validity of the parameters -
 the server will warn us if the parameters passed to kb were empty.
@@ -160,7 +160,7 @@ TIP: It is a good idea to write the following examples in a text file and then u
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a><span class="example-paren">(</span>"<span class="example-variable">%reason</span>" == ""<span class="example-paren">)</span><span class="example-variable">%reason</span> = "You're not welcome here!"<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_kick.html">kick</a> $0 <span class="example-variable">%reason</span><br>
 <span class="example-bracket">}</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The example above will first check the validity of the &lt;nickname&gt; passed to kb -
 if no nickname was passed, it will warn the user and stop.
 The next step will be the <i>ban &lt;nickname&gt;</i> call. Another enhancement is the <i>default reason</i> -
@@ -183,7 +183,7 @@ Aliases can be used also as functions.
 Assume that you often need to calculate the sum of three numbers - a function-alias is the way.
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_alias.html">alias</a><span class="example-paren">(</span>sum3<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_return.html">return</a> $<span class="example-paren">(</span>$0 + $1 + $2<span class="example-paren">)</span>; <span class="example-bracket">}</span>;<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 This will add the alias <i>sum3</i> and make it available both as a command and a function.
 The <i>return</i> command sets the return value of a sequence of commands
 (an alias is a sequence of commands... remember?) and terminates the execution (by returning
@@ -196,13 +196,13 @@ You will then use it in the following way:
 <span class="example-variable">%myfirstsum</span> = $sum3<span class="example-paren">(</span><span class="example-variable">%somevalue</span>,<span class="example-variable">%someothervalue</span>,4<span class="example-paren">)</span><br>
 <span class="example-variable">%anothersum</span> = $sum3<span class="example-paren">(</span>12,<span class="example-variable">%somevalue</span>,<span class="example-variable">%anothervalue</span><span class="example-paren">)</span><br>
 ...<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 Oops! I've used some variables without actually explaining them, please forgive me and read on.
 This example is again really simple, but you might have more complex function-aliases.
 The function-aliases are also normal aliases... you can use it as a command:
 </td></tr><tr><td class="example-box"><br>
 /sum3 1 2 3<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The above is a perfectly valid call, however there will be no visible results
 (because a command call implies ignoring the return value.
 In fact there is no difference at all between function-aliases and normal-aliases -
@@ -214,7 +214,7 @@ If return is not called inside an alias body, the return value will be set to <a
 <br>
 Aliases can accept switches just like any other command. The <a href="fnc_sw.html">$sw</a> is there
 exactly for that purpose. Check it out.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Special functions</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Special functions</div></td></tr><tr><td bgcolor="#FFFFFF">
 We have already seen the positional parameter functions.
 The functions of type <b>$N[-[M]]</b> (where N and M are positive
 numbers starting from 0 and N &lt; M) evaluate to the sequence of
@@ -228,7 +228,7 @@ of aliases and events.
 $0 evaluates to the 1st positional parameter<br>
 $0-4 evaluates to the parameters from first to 5th<br>
 $41- evaluates to the parameters from 41st to the last available<br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The function <b>$#</b> evaluates to the number of positional parameters available.
 The <b>positional parameter</b> functions do not accept parameters.<br>
 The special function <b>$(&lt;expression&gt;)</b>, called the
@@ -237,7 +237,7 @@ of the evaluation of the &lt;expression&gt;. In previous versions of KVIrc this
 function was called $calc().
 </td></tr><tr><td class="example-box"><br>
 <a href="cmd_echo.html">echo</a> $<span class="example-paren">(</span>2 + <span class="example-paren">(</span>3 ^ 7<span class="example-paren">)</span> &lt;= 1 * <span class="example-paren">(</span>3 && 2<span class="example-paren">))</span><br>
-</td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td bgcolor="#FFFFFF">
 The special function <b>${&lt;command sequence&gt;}</b> evaluates to the
 return value of the &lt;command sequence&gt;.<br>
 The special function <b>$$</b> evaluates to the current object ID,
